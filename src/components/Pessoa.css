@@ -1,0 +1,13 @@
+.QuadroDeInfo{
+    background-color: #282A35;
+    text-align: left;
+    padding: 15px;
+    max-width:200px;
+    color: white;
+    border-radius: 12px;
+
+}
+
+.QuadroDeInfo h2{
+    text-align: center;
+}
