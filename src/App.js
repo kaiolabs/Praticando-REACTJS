@@ -1,22 +1,27 @@
-import './App.css';
-import HelloWorld from './components/HelloWorld';
-import SayMyName from './components/SayMyName';
-import Pessoa from './components/Pessoa';
-import List from './components/List';
-import Evento from './components/Evento';
-import Form from './components/Form';
-import Condicional from './components/Condicional';
-import List2 from './components/List2';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import Footer from './Layout/Footer';
+import NavBar from './Layout/NavBar';
+import Contato from './pages/Contato';
+import Empresa from './pages/Empresa';
+import Home from './pages/Home';
+
 
 function App() {
 
-  const meusItens = ['React', 'Vue', 'Angular']
-
   return (
-    <div className="App">
-      <List2 itens={meusItens}/>
-      <List2 itens={[]}/>
-    </div>
+    <Router>
+
+      <NavBar/>
+      
+      <Routes>
+        <Route exact path="/" element={<Home/>}></Route>
+        <Route path="/empresa" element={<Empresa/>}></Route>
+        <Route path="/contato" element={<Contato/>}></Route>
+      </Routes>
+
+      <Footer/>
+    
+    </Router>
   );
 }
 
